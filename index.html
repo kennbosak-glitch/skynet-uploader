@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skynet Uploader — Personal YouTube Upload Tool</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; color: #1a1a1a; background: #fdfdfb; line-height: 1.6; }
+  header { border-bottom: 3px solid #b3001b; padding: 28px 20px 18px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 48px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  .tagline { color: #555; margin: 0; }
+  nav { margin-top: 14px; }
+  nav a { margin-right: 18px; color: #b3001b; text-decoration: none; font-weight: bold; }
+  nav a:hover { text-decoration: underline; }
+  h2 { margin-top: 36px; font-size: 1.25rem; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  ul { padding-left: 22px; }
+  footer { border-top: 1px solid #ddd; color: #666; font-size: 0.9rem; padding: 18px 20px; }
+  a { color: #b3001b; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="padding-bottom:0;">
+    <h1>Skynet Uploader</h1>
+    <p class="tagline">A personal, single-user upload tool for one creator's own YouTube channel.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h2>What this tool is</h2>
+  <p>Skynet Uploader is a personal command-line tool built and operated by one
+  individual creator, Kenn Bosak, for his own use on his own computer. Each day
+  he records a short video for his YouTube channel, and this tool automates the
+  repetitive step of uploading that video — with its title, description, and
+  custom thumbnail — to his own channel through the official YouTube Data API v3.
+  It is not a public service: it has no other users, is not distributed to
+  anyone, and runs only on the operator's own machine.</p>
+
+  <h2>What it accesses</h2>
+  <ul>
+    <li><strong>YouTube (upload only):</strong> the tool uses the YouTube Data
+    API v3 <em>videos.insert</em> method (resumable upload) and the
+    <em>thumbnails.set</em> method to publish the operator's own videos to his
+    own channel, <a href="https://www.youtube.com/@kennbosak">Kenn Bosak on
+    YouTube</a>, home of his show <em>Not Another Bitcoin Podcast</em>.</li>
+    <li><strong>Google Drive (read-only):</strong> when the operator chooses,
+    the tool reads a video file from the operator's own Google Drive
+    (<em>drive.readonly</em> scope) solely so it can upload that file to
+    YouTube. It never modifies or deletes Drive files.</li>
+  </ul>
+  <p>Those are the only two Google API scopes the tool requests:
+  <em>youtube.upload</em> and <em>drive.readonly</em>. It collects no analytics,
+  stores no data obtained from the APIs, and shares nothing with any third
+  party. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+
+  <h2>Operator</h2>
+  <p>Operated by: <strong>Kenn Bosak</strong>, individual creator, Blackwood,
+  New Jersey, USA.<br>
+  Contact: <a href="mailto:kennbosak@gmail.com">kennbosak@gmail.com</a></p>
+</main>
+<footer>
+  <div class="wrap" style="padding-bottom:0;">
+    Skynet Uploader is a personal tool of its operator and is not affiliated
+    with or endorsed by YouTube or Google. YouTube is a trademark of Google LLC.
+  </div>
+</footer>
+</body>
+</html>
